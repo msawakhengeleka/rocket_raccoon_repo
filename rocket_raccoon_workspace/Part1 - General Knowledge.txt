@@ -1,0 +1,22 @@
+
+1. 
+ a) Verify the maintainance task can be created and dropdown is assigned next to it. 
+ b) Verify the dropdown has 3 priority values in the given order (High, Medium, Low).
+ c) Verify each priority value can be selected.
+ d) Verify the order of items in the list is grouping High priority at the top and mark them red, Low priority are at the bottom
+ 
+2. Open a defect as:
+* Description: Priority List is saving Low priority items above the medium priority items. 
+* To reproduce: Step1--> Create a maintainance task with low priority. Step2--> Create a task with medium priority. Step3--> Verify the order of task on the list is showing Medium above the Low priority items. 
+* Expected: A Low priority item must be at the bottom, below the Medium item. 
+* Actual: A Low priority item is above the Medium priority item.
+* Data used: Provide data used. 
+* Attachment: Attach the screenshot of the Item's List showing Low priority item saved above the Medium priority item.
+
+3. A, D 
+
+4. D 
+
+5. C 
+
+6. B 
