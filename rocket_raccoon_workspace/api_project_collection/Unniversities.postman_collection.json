@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "f8297c82-cb3f-4338-8284-b1cfd92034f1",
+		"name": "Unniversities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3516376"
+	},
+	"item": [
+		{
+			"name": "AllSouthAfricaUniversities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "country",
+						"value": "South Africa",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://universities.hipolabs.com/search?country=South Africa",
+					"protocol": "http",
+					"host": [
+						"universities",
+						"hipolabs",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "South Africa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExistingUniversities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"/** Check the account status is Open */\r",
+							"pm.test(\"University Exists in Response\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"University of Stellenbosch\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://universities.hipolabs.com/search?query parameter key=South Africa",
+					"protocol": "http",
+					"host": [
+						"universities",
+						"hipolabs",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query parameter key",
+							"value": "South Africa"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
